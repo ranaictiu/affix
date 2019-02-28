@@ -49,7 +49,9 @@
       return (scrollTop + targetHeight <= scrollHeight - offsetBottom) ? false : 'bottom'
     }
 
-    var initializing   = this.affixed == null
+    //hard-coding to false to fix the issue - 'directly jumpting to last section of the page puts the affix at the bottom of the page'
+    //var initializing   = this.affixed == null
+    var initializing   = false;
     var colliderTop    = initializing ? scrollTop : position.top
     var colliderHeight = initializing ? targetHeight : height
 
